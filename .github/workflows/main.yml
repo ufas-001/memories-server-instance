@@ -1,1 +1,21 @@
+name: memories-server-ec2-instance
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{secrets.AWS_HOSTNAME}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{ secrets.AWS_USERNAME }}
+          script: |
+                echo "Hello world"
