@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.AWS_USERNAME }}
           script: |
                 sudo apt-get update
-                cd memories-server-ec2-instance
+                cd memories-server-instance
                 npm i
                 npm install pm2 -g
                 pm2 start index.js
