@@ -23,4 +23,4 @@ jobs:
                 npm i
                 npm install pm2 -g
                 pm2 start index.js
-                sudo systemcl reload nginx
+                sudo systemctl reload nginx
