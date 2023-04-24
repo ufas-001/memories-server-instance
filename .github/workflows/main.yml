@@ -18,4 +18,8 @@ jobs:
           key: ${{secrets.SSH_KEY}}
           username: ${{ secrets.AWS_USERNAME }}
           script: |
-                echo "Hello world"
+                sudo apt-get update
+                sudo apt-get install nginx -y
+                sudo apt-get install nodejs -y
+                sudo apt-get install npm -y
+                
