@@ -21,6 +21,6 @@ jobs:
                 sudo apt-get update
                 cd memories-server-instance
                 npm i
-                npm install pm2 -g
+                sudo npm install pm2 -g
                 pm2 start index.js
                 sudo systemctl reload nginx
