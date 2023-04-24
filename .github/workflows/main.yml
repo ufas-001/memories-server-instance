@@ -19,10 +19,6 @@ jobs:
           username: ${{ secrets.AWS_USERNAME }}
           script: |
                 sudo apt-get update
-                sudo apt-get install nginx -y
-                sudo apt-get install nodejs -y
-                sudo apt-get install npm -y
-                git clone https://github.com/ufas-001/memories-server-instance.git
                 cd memories-server-ec2-instance
                 npm i
                 npm install pm2 -g
